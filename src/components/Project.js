@@ -39,8 +39,8 @@ export default function Profile() {
             <span className="letter">R</span>
             <span className="letter">O</span>
             <span className="letter">J</span>
-            <span className="letter">C</span>
             <span className="letter">E</span>
+            <span className="letter">C</span>
             <span className="letter">T</span>
             <span className="letter">S</span>
         </Heading>
