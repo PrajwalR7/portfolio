@@ -50,6 +50,8 @@ export default function Skills() {
 
   return (
     <Flex 
+      py="30"
+      paddingBottom="10"
       backgroundColor={isDark ? "#1d1d1d" : "#16e7c7b8"}  
       width="100%" 
       direction={isNotSmallerScreen ? "row" : "column"}>
@@ -63,8 +65,7 @@ export default function Skills() {
             fontSize={isNotSmallerScreen ? "3xl" : "lg"}
             ml={isNotSmallerScreen ? "24" : "2"}
             alignSelf="flex-start" 
-            color={isDark ? "#08fdd8" : "#1d1d1d"} 
-            fontFamily="font-file-82132">
+            color={isDark ? "#08fdd8" : "#1d1d1d"} >
               <span className='letter'>S</span>
               <span className='letter'>k</span>
               <span className='letter'>i</span>
@@ -88,14 +89,12 @@ export default function Skills() {
           <MotionText
             initial={{opacity:0,y:100}} 
             animate={animationText}
-            ml={isNotSmallerScreen ? "24" : "4"} 
-            mt="6" 
+            ml={isNotSmallerScreen ? "28" : "4"} 
+            mt="4" 
             fontSize="lg" 
             mr="6">
                 Since beginning my journey as a Full-Stack developer, I’ve done several personal projects which I unfortunatley lost, and collaborated with talented people to create web products.
-
                 I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, React, CSS, Chakra-UI and Material UI building small and medium web apps, and small packages, animations, and coding interactive layouts.
-
                 Visit my LinkedIn profile for more details
           </MotionText>
         </Box>

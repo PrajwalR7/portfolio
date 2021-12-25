@@ -50,7 +50,7 @@
 
 @media screen and (max-width:600px) {
   .leaflet-container{
-    width:400px;
+    width:374px;
     height:300px;
   }
 }

@@ -14,7 +14,7 @@ import {useMediaQuery} from '@chakra-ui/media-query';
 import Project from './components/Project';
 import MeImage from './resources/me.jpg';
 import About from './components/About'
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useToast } from '@chakra-ui/react'
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -23,7 +23,7 @@ import {motion} from 'framer-motion';
 
 function App() {
   
-  
+  const contactRef = useRef(null);
   const MotionText = motion(Text);
   const MotionButton = motion(Button);
   const { colorMode,toggleColorMode } = useColorMode();
@@ -42,6 +42,10 @@ function App() {
     })
   },[])
   
+  const scrollTo = (givenRef) => {
+    window.scrollTo(0,givenRef.current.offsetTop)
+  }
+
   return (
     <motion.div className="home"
       initial={{
@@ -104,7 +108,7 @@ function App() {
               type:"spring",
               stiffness:120
             }}
-            fontFamily="font-file-82132" fontSize={isNotSmallerScreen ? "6xl" : "2xl"} 
+             fontSize={isNotSmallerScreen ? "6xl" : "2xl"} 
             fontWeight="semibold" 
             alignSelf="flex-start">Hi, I'm</MotionText>
             <MotionText  
@@ -124,7 +128,7 @@ function App() {
               }}
               mt={isNotSmallerScreen ? 0 : "2"}
               mb={isNotSmallerScreen ? 0 : "5"}
-              fontFamily="font-file-82132"
+              
               fontSize={isNotSmallerScreen ? "6xl" : "lg"} 
               fontWeight="bold" 
               bgGradient={isDark ? "linear(to-r,cyan.400,blue.400,purple.400)" : "linear(to-r,cyan.800,blue.800,purple.800)" } 
@@ -166,13 +170,14 @@ function App() {
                 type:"spring",
                 stiffness:120
               }}
-              fontFamily="font-file-82132" 
+               
               fontSize={isNotSmallerScreen ? "3xl" : "2xl" } 
               mr="5" 
               color={isDark ? "#08fdd8" : "#1d1d1d"}>Full Stack Developer
             </MotionText>
           </Box>
-          <MotionButton 
+          <MotionButton
+          onClick={() => scrollTo(contactRef)} 
           initial={{opacity:0}} 
           animate={{opacity:1}} 
           transition={{delay:1.3, duration:0.5}}
@@ -189,7 +194,7 @@ function App() {
         <Project />
         <About />
         <Skills />
-        <Contact />
+        <Contact refernce={contactRef}/>
       </VStack>
     </motion.div>
   );

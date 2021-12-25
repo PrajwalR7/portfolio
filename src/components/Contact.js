@@ -9,22 +9,36 @@ import {
 import {useColorMode} from '@chakra-ui/color-mode';
 import {useMediaQuery} from '@chakra-ui/media-query';
 import {FaLinkedin,FaInstagram,FaStackOverflow,FaGithub} from 'react-icons/fa'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import {useInView} from 'react-intersection-observer';
+import {motion,useAnimation} from 'framer-motion'
 
-export default function Contact() {
+export default function Contact(props) {
 
   const { colorMode,toggleColorMode } = useColorMode();
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   let isDark = colorMode === 'dark';
+  const MotionBox = motion(Box);
+  const {ref,inView} = useInView({triggerOnce:true,threshold:0.45});
+  const animation = useAnimation();
 
   useEffect(() => {
-    console.log(null)
-  },[isDark])
+    if(inView){
+      animation.start({
+        opacity:1,
+        transition:{
+          duration:1.5,
+          delay:0.5
+        }
+      })
+    }
+  },[inView])
 
   return (
-    <Flex width="100%" direction={isNotSmallerScreen ? "row" : "column"}>
+    <Flex ref={props.refernce} width="100%" direction={isNotSmallerScreen ? "row" : "column"}>
       <VStack width={isNotSmallerScreen ? "50%" : "100%"}>
-        <Heading mb="10" mt="10" fontSize={isNotSmallerScreen ? "3xl" : "lg"} fontFamily="font-file-82132" color={isDark ? "#08fdd8" : "#1d1d1d"}>
+        <Heading mb="10" mt="10" fontSize={isNotSmallerScreen ? "3xl" : "lg"}  
+        color={isDark ? "#08fdd8" : "#1d1d1d"}>
           <span className="letter">C</span>
           <span className="letter">o</span>
           <span className="letter">n</span>
@@ -119,7 +133,7 @@ export default function Contact() {
               cursor:'pointer',
               transform:'scale(1.1)'
             }} 
-            mb={isNotSmallerScreen ? "20" : "5"} a
+            mb={isNotSmallerScreen ? "15" : "5"} a
             lignSelf="center" 
             w="50px" 
             height="50px" 
@@ -127,7 +141,10 @@ export default function Contact() {
           </Box>
         </Flex>
       </VStack>
-      <Box 
+      <MotionBox
+      ref={ref}
+      initial={{opacity:0}}
+      animate={animation} 
       mt={isNotSmallerScreen ? 0 : "5"}>
         <MapContainer 
         center={[12.97, 77.59]} 
@@ -145,7 +162,7 @@ export default function Contact() {
             </Popup>
           </Marker>
         </MapContainer>
-      </Box>
+      </MotionBox>
     </Flex>
   )
 }

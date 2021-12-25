@@ -31,7 +31,7 @@ export default function Profile() {
       direction={isNotSmallerScreen ? "column" : "column"}>
         <Heading 
           fontSize={isNotSmallerScreen ? "3xl" : "lg"} 
-          mt="14" fontFamily="font-file-82132" 
+          mt="14"  
           color={isDark ? "#08fdd8" : "#1d1d1d"} 
           alignSelf="center" 
           mb={12}>
@@ -57,7 +57,7 @@ export default function Profile() {
                 backgroundColor={isDark ? "white" : "gray.200"}
                 borderWidth="1px" 
                 borderRadius="lg"
-                width="300px"
+                width="350px"
                 _hover={{
                   backgroundColor:"white",
                   cursor:"pointer",
@@ -66,9 +66,9 @@ export default function Profile() {
                 }} 
                 transition="all 300ms linear">
                   <VStack 
-                  padding="6">
+                    padding="6">
                     <Text 
-                      fontFamily="font-file-82132" 
+                       
                       color="red.500" 
                       fontSize="2xl">CLI Reddit</Text>
                     <Box p="6">
@@ -81,7 +81,7 @@ export default function Profile() {
                           color="black" 
                           borderRadius="full" 
                           backgroundColor="#e5ce4f" 
-                          px="2">JS</Badge>
+                          px="3">JS</Badge>
                       </Box>
                     </Box>
                     <Box 
@@ -104,7 +104,7 @@ export default function Profile() {
                 backgroundColor={isDark ? "white" : "gray.200"}
                 borderWidth="1px" 
                 borderRadius="lg"
-                width="300px"
+                width="350px"
                 _hover={{
                   backgroundColor:"white",
                   cursor:"pointer",
@@ -114,7 +114,7 @@ export default function Profile() {
                 transition="all 300ms linear">
                   <VStack padding="6">
                     <Text 
-                      fontFamily="font-file-82132" 
+                       
                       color="teal" 
                       fontSize="2xl">Soap Search</Text>
                     <Box p="6">
@@ -161,7 +161,7 @@ export default function Profile() {
                 backgroundColor={isDark ? "white" : "gray.200"}
                 borderWidth="1px" 
                 borderRadius="lg"
-                width="300px"
+                width="350px"
                 _hover={{
                   backgroundColor:"white",
                   cursor:"pointer",
@@ -171,7 +171,7 @@ export default function Profile() {
                 transition="all 300ms linear">
                   <VStack padding="6">
                     <Text 
-                      fontFamily="font-file-82132" 
+                       
                       color="purple" 
                       fontSize="2xl">Audio - Text</Text>
                     <Box p="6">
@@ -206,8 +206,8 @@ export default function Profile() {
                       backgroundColor="#d6d6d6">
                         <Text 
                           textAlign="center" 
-                          fontSize="lg" c
-                          olor="#10141c">
+                          fontSize="lg" 
+                          color="#10141c">
                             Audio to text converter using DeepGram API
                         </Text>
                     </Box>
@@ -220,7 +220,7 @@ export default function Profile() {
               backgroundColor={isDark ? "white" : "gray.200"}
               borderWidth="1px" 
               borderRadius="lg"
-              width="300px"
+              width="350px"
               _hover={{
                 backgroundColor:"white",
                 cursor:"not-allowed",
@@ -230,7 +230,7 @@ export default function Profile() {
               transition="all 300ms linear">
                 <VStack padding="6">
                   <Text 
-                    fontFamily="font-file-82132" 
+                     
                     color="darkgoldenrod" 
                     fontSize="2xl">ChatApp</Text>
                   <Box p="6">

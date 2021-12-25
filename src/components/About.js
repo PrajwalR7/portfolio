@@ -41,7 +41,7 @@ export default function About() {
       });
       animationImg.start({
         opacity:1,
-        x:0,
+        y:0,
         transition:{
           duration:1,
           delay:0.25
@@ -76,8 +76,7 @@ export default function About() {
         fontSize={isNotSmallerScreen ? "4xl" :"lg"}
         ml={isNotSmallerScreen ? "16" : 0}
         alignSelf="flex-start" 
-        color={isDark ? "#08fdd8" : "#1d1d1d"} 
-        fontFamily="font-file-82132">
+        color={isDark ? "#08fdd8" : "#1d1d1d"} >
           <span className='letter'>M</span>
           <span className='letter'>e</span>
           <span>,</span>
@@ -108,7 +107,7 @@ export default function About() {
         justify="center" 
         width={isNotSmallerScreen ? "60%" : "100%"}>
           <MotionImage 
-            initial={{opacity:0,x:1500}} 
+            initial={{opacity:0,y:500}} 
             animate={animationImg} src={Tech} />
       </Flex>
     </Flex>
