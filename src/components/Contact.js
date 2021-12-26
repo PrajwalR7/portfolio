@@ -124,7 +124,7 @@ export default function Contact(props) {
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
-              w="40px" h="40px" margin="10" 
+              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"}
               onClick={() => window.location.href="https://github.com/PrajwalR7"} as={FaGithub} />
               <Icon 
                _hover={{
@@ -132,7 +132,7 @@ export default function Contact(props) {
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
-              w="40px" h="40px" margin="10" 
+              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"} 
               onClick={() => window.location.href="https://www.linkedin.com/in/prajwal-ramesh-918a84187/"} as={FaLinkedin} />
               <Icon 
                _hover={{
@@ -140,7 +140,7 @@ export default function Contact(props) {
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
-              w="40px" h="40px" margin="10"
+              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"}
               onClick={() => window.location.href="https://stackoverflow.com/users/16412216/prajwal-ramesh"} as={FaStackOverflow} />
               <Icon 
                _hover={{
@@ -148,7 +148,7 @@ export default function Contact(props) {
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
-              w="40px" h="40px" margin="10" as={FaInstagram} />
+              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"} as={FaInstagram} />
             </Flex>
           </Flex>
           {/* <Box 
