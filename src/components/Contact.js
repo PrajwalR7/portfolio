@@ -4,8 +4,15 @@ import {
   Heading,
   VStack,
   Icon,
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  InputLeftElement,
+  Textarea,
   Box,
+  Button,
   Text} from '@chakra-ui/react'
+import {FaPersonBooth} from 'react-icons/fa'
 import {useColorMode} from '@chakra-ui/color-mode';
 import {useMediaQuery} from '@chakra-ui/media-query';
 import {FaLinkedin,FaInstagram,FaStackOverflow,FaGithub} from 'react-icons/fa'
@@ -37,7 +44,7 @@ export default function Contact(props) {
   return (
     <Flex ref={props.refernce} width="100%" direction={isNotSmallerScreen ? "row" : "column"}>
       <VStack width={isNotSmallerScreen ? "50%" : "100%"}>
-        <Heading mb="10" mt="10" fontSize={isNotSmallerScreen ? "3xl" : "lg"}  
+        <Heading mb="4" mt="10" fontSize={isNotSmallerScreen ? "3xl" : "lg"}  
         color={isDark ? "#08fdd8" : "#1d1d1d"}>
           <span className="letter">C</span>
           <span className="letter">o</span>
@@ -52,10 +59,99 @@ export default function Contact(props) {
         </Heading>
         <Flex 
         width="100%" 
-        direction={isNotSmallerScreen ? "column" : "column"} 
-        justifyContent={isNotSmallerScreen ? "space-around" : ""} 
-        verticalAlign={isNotSmallerScreen ? "" : "center"}>
-          <Box 
+        direction={isNotSmallerScreen ? "column" : "column"}
+        // justifyContent={isNotSmallerScreen ? "space-around" : ""} 
+        // verticalAlign={isNotSmallerScreen ? "" : "center"}
+        >
+          <Box p="8" alignSelf="center" width="100%">
+            <Text fontSize="lg" alignSelf="center">I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.</Text>
+          </Box>
+          <Flex 
+          direction={isNotSmallerScreen ? "row" : 'column'}
+          width="100%"
+          wrap="wrap"
+          >
+            <InputGroup width={isNotSmallerScreen ? "49%" : "100%"} p="2" alignSelf="center">
+              <Input 
+              focusBorderColor=""
+              color="white"
+              backgroundColor={isDark ? "#1d1d1d" : "white"}
+              outlineOffset={0}
+              colorScheme={isDark ? "#08fdd8" : "#1d1d1d"}
+              // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
+              type="text" placeholder='Name' width="100%" size="lg"/>
+            </InputGroup>
+            <InputGroup width={isNotSmallerScreen ? "49%" : "100%"} p="2" alignSelf="center" >
+              <Input
+              focusBorderColor=""
+              color="white"
+              backgroundColor={isDark ? "#1d1d1d" : "white"}
+              outlineOffset={0}
+              colorScheme={isDark ? "#08fdd8" : "#1d1d1d"}
+              // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
+              type="email" placeholder='Email' width="100%" size="lg"/>
+            </InputGroup>
+            <InputGroup mt="5" width="98%" p="2" alignSelf="center" >
+              <Input
+              focusBorderColor=""
+              color="white"
+              backgroundColor={isDark ? "#1d1d1d" : "white"}
+              outlineOffset={0}
+              colorScheme={isDark ? "#08fdd8" : "#1d1d1d"}
+              // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
+              type="text" placeholder='Subject' width="100%" size="lg"/>
+            </InputGroup>
+            <Textarea 
+            focusBorderColor=""
+            color="white"
+            backgroundColor={isDark ? "#1d1d1d" : "white"}
+            outlineOffset={0}
+            colorScheme={isDark ? "#08fdd8" : "#1d1d1d"}
+            // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
+            placeholder='Message' width="96%" ml="2" alignSelf="center" mt="7"></Textarea>
+            <Button
+            mb="10"
+            _hover={{
+              backgroundColor:isDark ? "white" : "#1d1d1d",
+              color:isDark ? "#10141c" : "white",
+              transform:"translate(8px,0) scale(1.1)"
+            }}
+            transform={'translateX(8px)'} mt="6" alignSelf={isNotSmallerScreen ? "flex-start" : "center" } justify="flex-start" p="6">Send Message!</Button>
+            <Flex width="100%" direction="row" justify="center">
+              <Icon 
+               _hover={{
+                color:isDark ? "white" : 'white',
+                cursor:'pointer',
+                transform:'scale(1.1)'
+              }} 
+              w="40px" h="40px" margin="10" 
+              onClick={() => window.location.href="https://github.com/PrajwalR7"} as={FaGithub} />
+              <Icon 
+               _hover={{
+                color:isDark ? "white" : 'white',
+                cursor:'pointer',
+                transform:'scale(1.1)'
+              }} 
+              w="40px" h="40px" margin="10" 
+              onClick={() => window.location.href="https://www.linkedin.com/in/prajwal-ramesh-918a84187/"} as={FaLinkedin} />
+              <Icon 
+               _hover={{
+                color:isDark ? "white" : 'white',
+                cursor:'pointer',
+                transform:'scale(1.1)'
+              }} 
+              w="40px" h="40px" margin="10"
+              onClick={() => window.location.href="https://stackoverflow.com/users/16412216/prajwal-ramesh"} as={FaStackOverflow} />
+              <Icon 
+               _hover={{
+                color:isDark ? "white" : 'white',
+                cursor:'pointer',
+                transform:'scale(1.1)'
+              }} 
+              w="40px" h="40px" margin="10" as={FaInstagram} />
+            </Flex>
+          </Flex>
+          {/* <Box 
           backgroundColor="transparent" 
           display="flex" alignSelf="center" 
           color={isDark ? "#16e7c7b8" : "#252525"}>
@@ -138,9 +234,10 @@ export default function Contact(props) {
             w="50px" 
             height="50px" 
             as={FaInstagram}/>
-          </Box>
+          </Box> */}
         </Flex>
       </VStack>
+
       <MotionBox
       ref={ref}
       initial={{opacity:0}}
