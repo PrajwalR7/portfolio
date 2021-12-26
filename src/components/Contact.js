@@ -152,8 +152,8 @@ export default function Contact(props) {
         scrollWheelZoom={false}>
           <TileLayer
             attribution='© <a href="https://stadiamaps.com/">Stadia Maps</a>'
-            url={isDark ? 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png' || null
-             : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" || null}
+            url={!(colorMode === 'dark') ? 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png' 
+             : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" }
           />
           <Marker 
           position={[12.97, 77.59]}>
