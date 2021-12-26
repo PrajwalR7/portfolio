@@ -15,7 +15,7 @@ export default function Skills() {
   const animationHeading = useAnimation();
   const animationText = useAnimation();
   const animationProgress = useAnimation();
-  const [refHeading,inViewHeading] = useInView({triggerOnce:true,threshold:0.55});
+  const [refHeading,inViewHeading] = useInView({triggerOnce:true,threshold:0.45});
   const MotionHeading = motion(Heading);
   const MotionProgress = motion(Progress);
   const MotionText = motion(Text);
@@ -28,10 +28,10 @@ export default function Skills() {
       console.log(inViewHeading);
       animationHeading.start({
         opacity:1,
-        x:20,
+        x:0,
         transition:{
           delay:0.25,
-          duration:1
+          duration:0.8
         }
       });
       animationText.start({
@@ -39,7 +39,7 @@ export default function Skills() {
         y:0,
         transition:{
           delay:0.25,
-          duration:1
+          duration:0.8
         }
       });
       // animationProgress.start({
@@ -50,7 +50,7 @@ export default function Skills() {
 
   return (
     <Flex 
-      py="30"
+      // py="30"
       paddingBottom="10"
       backgroundColor={isDark ? "#1d1d1d" : "#16e7c7b8"}  
       width="100%" 
@@ -59,11 +59,11 @@ export default function Skills() {
           mt="20" 
           width={isNotSmallerScreen ? "40%" : "100%"}>
           <MotionHeading 
-            initial={{opacity:0,x:0}} 
+            initial={{opacity:0,x:-40}} 
             animate={animationHeading} 
             ref={refHeading}
-            fontSize={isNotSmallerScreen ? "3xl" : "lg"}
-            ml={isNotSmallerScreen ? "24" : "2"}
+            fontSize={isNotSmallerScreen ? "20px" : "lg"}
+            ml={isNotSmallerScreen ? "14" : "2"}
             alignSelf="flex-start" 
             color={isDark ? "#08fdd8" : "#1d1d1d"} >
               <span className='letter'>S</span>
@@ -89,7 +89,7 @@ export default function Skills() {
           <MotionText
             initial={{opacity:0,y:100}} 
             animate={animationText}
-            ml={isNotSmallerScreen ? "28" : "4"} 
+            ml={isNotSmallerScreen ? "14" : "4"} 
             mt="4" 
             fontSize="lg" 
             mr="6">

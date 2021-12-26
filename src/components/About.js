@@ -14,7 +14,7 @@ import {useInView} from 'react-intersection-observer';
 import {motion,useAnimation} from 'framer-motion'
 
 export default function About() {
-  const [refHeading,inViewHeading] = useInView({triggerOnce:true,threshold:0.45});
+  const [refHeading,inViewHeading] = useInView({triggerOnce:true,threshold:0.35});
   // const [refText,inViewText] = useInView({triggerOnce:true,threshold:0.25});
   const animationHeading = useAnimation();
   const animationText = useAnimation();
@@ -25,26 +25,26 @@ export default function About() {
       console.log(inViewHeading);
       animationHeading.start({
         opacity:1,
-        x:20,
+        x:0,
         transition:{
-          delay:0.25,
-          duration:1
+          delay:0.15,
+          duration:0.6
         }
       });
       animationText.start({
         opacity:1,
         y:0,
         transition:{
-          delay:0.25,
-          duration:1
+          delay:0.15,
+          duration:0.6
         }
       });
       animationImg.start({
         opacity:1,
         y:0,
         transition:{
-          duration:1,
-          delay:0.25
+          duration:0.6,
+          delay:0.15
         }
       })
     }
@@ -64,14 +64,15 @@ export default function About() {
     // ref={ref} initial={{x:-500}} animate={animationHeading}
       backgroundColor={isDark ? "#252525" : "#56edd6"} 
       width="100%" 
-      padding="12" 
+      padding="5" 
       direction={isNotSmallerScreen ? "row" : "column"}>
       <Box
         // ref={ref} initial={{x:-500}} animate={animationHeading}
         width={isNotSmallerScreen ? "40%" : "100%"}>
         <MotionHeading 
         ref={refHeading} 
-        initial={{opacity:0,x:0}} 
+        mt="10"
+        initial={{opacity:0,x:-100}} 
         animate={animationHeading}
         fontSize={isNotSmallerScreen ? "4xl" :"lg"}
         ml={isNotSmallerScreen ? "16" : 0}
