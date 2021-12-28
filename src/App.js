@@ -49,10 +49,10 @@ function App() {
   return (
     <motion.div className="home"
       initial={{
-        opacity:0
+        backgroundColor:'transparent'
       }}
       animate={{
-        opacity:1
+        backgroundColor:'initial'
       }}
       transition={{
         duration:2,
@@ -104,7 +104,7 @@ function App() {
             }}
             transition={{
               delay:1,
-              duration:0.5,
+              duration:0.25,
               type:"spring",
               stiffness:120
             }}
@@ -112,20 +112,20 @@ function App() {
             fontWeight="semibold" 
             alignSelf="flex-start">Hi, I'm</MotionText>
             <MotionText  
-              initial={{
-                x:'-100vw',
-                opacity:0
-              }}
-              animate={{
-                x:0,
-                opacity:1
-              }}
-              transition={{
-                delay:1.2,
-                duration:0.5,
-                type:"spring",
-                stiffness:120
-              }}
+              // initial={{
+              //   x:'-100vw',
+              //   opacity:0
+              // }}
+              // animate={{
+              //   x:0,
+              //   opacity:1
+              // }}
+              // transition={{
+              //   delay:1.2,
+              //   duration:0.25,
+              //   type:"spring",
+              //   stiffness:120
+              // }}
               mt={isNotSmallerScreen ? 0 : "2"}
               mb={isNotSmallerScreen ? 0 : "5"}
               
@@ -134,26 +134,95 @@ function App() {
               bgGradient={isDark ? "linear(to-r,cyan.400,blue.400,purple.400)" : "linear(to-r,cyan.800,blue.800,purple.800)" } 
               bgClip="text" 
               alignSelf="self-start">
-              <motion.span 
-                initial={{
-                  x:-'100vw'
-                }}
-                animate={{x:0}}
-                transition={{duration:0.5, delay:1, type:'spring',stiffness:120}}
-                className="letter">P</motion.span>
-                <span className="letter">R</span>
-                <span className="letter">A</span>
-                <span className="letter">J</span>
-                <span className="letter">W</span>
-                <span className="letter">A</span>
-                <span className="letter">L</span>
-                <span> </span>
-                <span className="letter">R</span>
-                <span className="letter">A</span>
-                <span className="letter">M</span>
-                <span className="letter">E</span>
-                <span className="letter">S</span>
-                <span className="letter">H</span>
+              <div className='myname'>
+                <motion.span 
+                  className="letter"
+                  initial={{
+                    opacity:0
+                  }}
+                  animate={{opacity:1}}
+                  transition={{duration:0.75, delay:1.2, type:'tween'}}
+                  >P</motion.span>
+                  <motion.span 
+                  className="letter"
+                  initial={{
+                    opacity:0
+                  }}
+                  animate={{opacity:1}}
+                  transition={{duration:0.75, delay:1.4, type:'tween'}}>R</motion.span>
+                  <motion.span 
+                  className="letter"
+                  initial={{
+                    opacity:0
+                  }}
+                  animate={{opacity:1}}
+                  transition={{duration:0.75, delay:1.6, type:'tween'}}>A</motion.span>
+                  <motion.span 
+                  className="letter"
+                  initial={{
+                    opacity:0
+                  }}
+                  animate={{opacity:1}}
+                  transition={{duration:0.75, delay:1.8, type:'tween'}}>J</motion.span>
+                  <motion.span 
+                  className="letter"
+                  initial={{
+                    opacity:0
+                  }}
+                  animate={{opacity:1}}
+                  transition={{duration:0.75, delay:2, type:'tween'}}>W</motion.span>
+                  <motion.span 
+                  className="letter"
+                  initial={{
+                    opacity:0
+                  }}
+                  animate={{opacity:1}}
+                  transition={{duration:0.75, delay:2.2, type:'tween'}}>A</motion.span>
+                  <motion.span 
+                  className="letter"
+                  initial={{
+                    opacity:0
+                  }}
+                  animate={{opacity:1}}
+                  transition={{duration:0.75, delay:2.4, type:'tween'}}>L</motion.span>
+                  <span> </span>
+                  <motion.span
+                    className="letter"
+                    initial={{opacity:0}}
+                    animate={{opacity:1}}
+                    transition={{delay:2.75,duration:0.75}}
+                  >R</motion.span>
+                  <motion.span
+                    className="letter"
+                    initial={{opacity:0}}
+                    animate={{opacity:1}}
+                    transition={{delay:2.75,duration:0.75}}
+                  >A</motion.span>
+                  <motion.span
+                    className="letter"
+                    initial={{opacity:0}}
+                    animate={{opacity:1}}
+                    transition={{delay:2.75,duration:0.75}}
+                  >M</motion.span>
+                  <motion.span
+                    className="letter"
+                    initial={{opacity:0}}
+                    animate={{opacity:1}}
+                    transition={{delay:2.75,duration:0.75}}
+                  >E</motion.span>
+                  <motion.span
+                    className="letter"
+                    initial={{opacity:0}}
+                    animate={{opacity:1}}
+                    transition={{delay:2.75,duration:0.75}}
+                  >S</motion.span>
+                  <motion.span
+                    className="letter"
+                    initial={{opacity:0}}
+                    animate={{opacity:1}}
+                    transition={{delay:2.75,duration:0.75}}
+                  >H</motion.span>
+              </div>
                 </MotionText>
             <MotionText
               initial={{
@@ -166,7 +235,7 @@ function App() {
               }}
               transition={{
                 delay:1.3,
-                duration:0.5,
+                duration:0.25,
                 type:"spring",
                 stiffness:120
               }}
@@ -180,7 +249,6 @@ function App() {
           onClick={() => scrollTo(contactRef)} 
           initial={{opacity:0}} 
           animate={{opacity:1}} 
-          transition={{delay:1.3, duration:0.5}}
           alignSelf={isNotSmallerScreen ? "flex-start" :"center"} 
           mt="10" 
           width={isNotSmallerScreen ? "15%" : "50%"}
@@ -189,7 +257,8 @@ function App() {
             color:isDark ? "#10141c" : "white",
             transform:"scale(1.1)"
           }}
-          transition="all 300ms linear">Contact me</MotionButton>
+          transition="all 300ms linear"
+          >Contact me</MotionButton>
         </Flex>
         <Project />
         <About />
