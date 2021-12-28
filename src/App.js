@@ -123,93 +123,6 @@ function App() {
               alignSelf="self-start">
               <div className="name">
                 <h1 className={isDark ? 'myname_dark' : "myname"}>PRAJWAL RAMESH</h1>
-                {/* <motion.span 
-                  className="letter"
-                  initial={{
-                    opacity:0
-                  }}
-                  animate={{opacity:1}}
-                  transition={{duration:0.75, delay:1.2, type:'tween'}}
-                  >P</motion.span>
-                  <motion.span 
-                  className="letter"
-                  initial={{
-                    opacity:0
-                  }}
-                  animate={{opacity:1}}
-                  transition={{duration:0.75, delay:1.4, type:'tween'}}>R</motion.span>
-                  <motion.span 
-                  className="letter"
-                  initial={{
-                    opacity:0
-                  }}
-                  animate={{opacity:1}}
-                  transition={{duration:0.75, delay:1.6, type:'tween'}}>A</motion.span>
-                  <motion.span 
-                  className="letter"
-                  initial={{
-                    opacity:0
-                  }}
-                  animate={{opacity:1}}
-                  transition={{duration:0.75, delay:1.8, type:'tween'}}>J</motion.span>
-                  <motion.span 
-                  className="letter"
-                  initial={{
-                    opacity:0
-                  }}
-                  animate={{opacity:1}}
-                  transition={{duration:0.75, delay:2, type:'tween'}}>W</motion.span>
-                  <motion.span 
-                  className="letter"
-                  initial={{
-                    opacity:0
-                  }}
-                  animate={{opacity:1}}
-                  transition={{duration:0.75, delay:2.2, type:'tween'}}>A</motion.span>
-                  <motion.span 
-                  className="letter"
-                  initial={{
-                    opacity:0
-                  }}
-                  animate={{opacity:1}}
-                  transition={{duration:0.75, delay:2.4, type:'tween'}}>L</motion.span>
-                  <span> </span>
-                  <motion.span
-                    className="letter"
-                    initial={{opacity:0}}
-                    animate={{opacity:1}}
-                    transition={{delay:2.75,duration:0.75}}
-                  >R</motion.span>
-                  <motion.span
-                    className="letter"
-                    initial={{opacity:0}}
-                    animate={{opacity:1}}
-                    transition={{delay:2.75,duration:0.75}}
-                  >A</motion.span>
-                  <motion.span
-                    className="letter"
-                    initial={{opacity:0}}
-                    animate={{opacity:1}}
-                    transition={{delay:2.75,duration:0.75}}
-                  >M</motion.span>
-                  <motion.span
-                    className="letter"
-                    initial={{opacity:0}}
-                    animate={{opacity:1}}
-                    transition={{delay:2.75,duration:0.75}}
-                  >E</motion.span>
-                  <motion.span
-                    className="letter"
-                    initial={{opacity:0}}
-                    animate={{opacity:1}}
-                    transition={{delay:2.75,duration:0.75}}
-                  >S</motion.span>
-                  <motion.span
-                    className="letter"
-                    initial={{opacity:0}}
-                    animate={{opacity:1}}
-                    transition={{delay:2.75,duration:0.75}}
-                  >H</motion.span> */}
               </div>
                 </MotionText>
             <MotionText
@@ -233,7 +146,7 @@ function App() {
               color={isDark ? "#08fdd8" : "#1d1d1d"}>
                 <Typewriter
                   options={{
-                    strings: ['Student', 'Full Stack Developer','F1 Fan'],
+                    strings: ['Student', 'Full Stack Developer','F1 Fan','No Mikel no!!'],
                     autoStart: true,
                     loop: true,
                     delay:2,
