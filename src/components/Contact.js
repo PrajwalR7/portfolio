@@ -120,121 +120,41 @@ export default function Contact(props) {
             <Flex width="100%" direction="row" justify="center">
               <Icon 
                _hover={{
-                color:isDark ? "white" : 'white',
+                color:isDark ? "#08fdd8" : 'white',
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
+              transition="all 200ms linear"
               w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"}
               onClick={() => window.location.href="https://github.com/PrajwalR7"} as={FaGithub} />
               <Icon 
                _hover={{
-                color:isDark ? "white" : 'white',
+                color:isDark ? "#08fdd8" : 'white',
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
+              transition="all 200ms linear"
               w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"} 
               onClick={() => window.location.href="https://www.linkedin.com/in/prajwal-ramesh-918a84187/"} as={FaLinkedin} />
               <Icon 
                _hover={{
-                color:isDark ? "white" : 'white',
+                color:isDark ? "#08fdd8" : 'white',
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
+              transition="all 200ms linear"
               w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"}
               onClick={() => window.location.href="https://stackoverflow.com/users/16412216/prajwal-ramesh"} as={FaStackOverflow} />
               <Icon 
                _hover={{
-                color:isDark ? "white" : 'white',
+                color:isDark ? "#08fdd8" : 'white',
                 cursor:'pointer',
                 transform:'scale(1.1)'
               }} 
+              transition="all 200ms linear"
               w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"} as={FaInstagram} />
             </Flex>
           </Flex>
-          {/* <Box 
-          backgroundColor="transparent" 
-          display="flex" alignSelf="center" 
-          color={isDark ? "#16e7c7b8" : "#252525"}>
-            <Text 
-            fontSize={isNotSmallerScreen ? "2xl" : "lg"} 
-            mr={isNotSmallerScreen ? "10" : "2"} 
-            mt={isNotSmallerScreen ? "2" : "3.5"}>LinkedIn</Text>
-            <Icon 
-            transform={isNotSmallerScreen ? 'scale(1)' : 'scale(0.5)'}
-            transition="all 200ms linear"
-            _hover={{
-              color:isDark ? "white" : 'white',
-              cursor:'pointer',
-              transform:'scale(1.1)'
-            }} 
-            onClick={() => window.location.href="https://www.linkedin.com/in/prajwal-ramesh-918a84187/"} 
-            mb={isNotSmallerScreen ? "20" : "5"} 
-            alignSelf="center" 
-            w="50px" 
-            height="50px" 
-            as={FaLinkedin}/>
-          </Box>
-          <Box 
-          backgroundColor="transparent" 
-          display="flex" 
-          alignSelf="center" 
-          color={isDark ? "#16e7c7b8" : "#252525"}>
-            <Text 
-            fontSize={isNotSmallerScreen ? "2xl" : "lg"} 
-            mr={isNotSmallerScreen ? "10" : "2"} 
-            mt={isNotSmallerScreen ? "2" : "3.5"}>Github</Text>
-            <Icon
-            transform={isNotSmallerScreen ? 'scale(1)' : 'scale(0.5)'}
-            transition="all 200ms linear"
-            _hover={{
-              color:isDark ? "white" : 'white',
-              cursor:'pointer',
-              transform:'scale(1.1)'
-            }}  
-            onClick={() => window.location.href="https://github.com/PrajwalR7"} mb={isNotSmallerScreen ? "20" : "5"}alignSelf="center" w="50px" height="50px" as={FaGithub}/>
-          </Box>
-          <Box 
-          backgroundColor="transparent" 
-          display="flex" 
-          alignSelf="center" 
-          color={isDark ? "#16e7c7b8" : "#252525"}>
-            <Text 
-            fontSize={isNotSmallerScreen ? "2xl" : "lg"} 
-            mr={isNotSmallerScreen ? "10" : "2"} 
-            mt={isNotSmallerScreen ? "2" : "3.5"}>Stack Overflow</Text>
-            <Icon 
-            transform={isNotSmallerScreen ? 'scale(1)' : 'scale(0.5)'}
-            transition="all 200ms linear"
-            _hover={{
-              color:isDark ? "white" : 'white',
-              cursor:'pointer',
-              transform:'scale(1.1)'
-            }} 
-            onClick={() => window.location.href="https://stackoverflow.com/users/16412216/prajwal-ramesh"} mb={isNotSmallerScreen ? "20" : "5"} alignSelf="center" w="50px" height="50px" as={FaStackOverflow}/>
-          </Box>
-          <Box 
-          backgroundColor="transparent" 
-          display="flex" 
-          alignSelf="center" 
-          color={isDark ? "#16e7c7b8" : "#252525"}>
-            <Text 
-            fontSize={isNotSmallerScreen ? "2xl" : "lg"} 
-            mr={isNotSmallerScreen ? "10" : "2"} 
-            mt={isNotSmallerScreen ? "2" : "3.5"}>Instagram</Text>
-            <Icon 
-            transform={isNotSmallerScreen ? 'scale(1)' : 'scale(0.5)'}
-            transition="all 200ms linear"
-            _hover={{
-              color:isDark ? "white" : 'white',
-              cursor:'pointer',
-              transform:'scale(1.1)'
-            }} 
-            mb={isNotSmallerScreen ? "15" : "5"} a
-            lignSelf="center" 
-            w="50px" 
-            height="50px" 
-            as={FaInstagram}/>
-          </Box> */}
         </Flex>
       </VStack>
 
