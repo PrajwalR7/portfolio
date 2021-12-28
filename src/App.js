@@ -72,8 +72,8 @@ function App() {
           alignSelf={isNotSmallerScreen ? "flex-start" : "center"} 
           color={isDark ? "#1d1d1d" : "#08fdd8"}>Welcome</Text>
           
-          {
-            isNotSmallerScreen ? 
+          {/* {
+            isNotSmallerScreen ?  */}
             <>
               <Spacer></Spacer>
               <IconButton 
@@ -83,8 +83,8 @@ function App() {
               onClick={toggleColorMode} 
               isRound="true"></IconButton>
             </>
-          : null
-          }
+          {/* : null
+          } */}
         </Flex>
         <Flex 
         padding={isNotSmallerScreen ? "32" : "12"} 
