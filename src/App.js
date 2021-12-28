@@ -19,6 +19,7 @@ import { useToast } from '@chakra-ui/react'
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import {motion} from 'framer-motion';
+import Typewriter from 'typewriter-effect';
 
 
 function App() {
@@ -111,31 +112,18 @@ function App() {
              fontSize={isNotSmallerScreen ? "6xl" : "2xl"} 
             fontWeight="semibold" 
             alignSelf="flex-start">Hi, I'm</MotionText>
-            <MotionText  
-              // initial={{
-              //   x:'-100vw',
-              //   opacity:0
-              // }}
-              // animate={{
-              //   x:0,
-              //   opacity:1
-              // }}
-              // transition={{
-              //   delay:1.2,
-              //   duration:0.25,
-              //   type:"spring",
-              //   stiffness:120
-              // }}
+            <MotionText
               mt={isNotSmallerScreen ? 0 : "2"}
               mb={isNotSmallerScreen ? 0 : "5"}
               
               fontSize={isNotSmallerScreen ? "6xl" : "lg"} 
               fontWeight="bold" 
-              bgGradient={isDark ? "linear(to-r,cyan.400,blue.400,purple.400)" : "linear(to-r,cyan.800,blue.800,purple.800)" } 
-              bgClip="text" 
+              // bgGradient={isDark ? "linear(to-r,cyan.400,blue.400,purple.400)" : "linear(to-r,cyan.800,blue.800,purple.800)" } 
+              // bgClip="text" 
               alignSelf="self-start">
-              <div className='myname'>
-                <motion.span 
+              <div >
+                <h1 className={isDark ? 'myname_dark' : "myname"}>PRAJWAL RAMESH</h1>
+                {/* <motion.span 
                   className="letter"
                   initial={{
                     opacity:0
@@ -221,7 +209,7 @@ function App() {
                     initial={{opacity:0}}
                     animate={{opacity:1}}
                     transition={{delay:2.75,duration:0.75}}
-                  >H</motion.span>
+                  >H</motion.span> */}
               </div>
                 </MotionText>
             <MotionText
@@ -242,7 +230,16 @@ function App() {
                
               fontSize={isNotSmallerScreen ? "3xl" : "2xl" } 
               mr="5" 
-              color={isDark ? "#08fdd8" : "#1d1d1d"}>Full Stack Developer
+              color={isDark ? "#08fdd8" : "#1d1d1d"}>
+                <Typewriter
+                  options={{
+                    strings: ['Student', 'Full Stack Developer','F1 Fan'],
+                    autoStart: true,
+                    loop: true,
+                    delay:2,
+                    deleteSpeed:1.5
+                  }}
+                />
             </MotionText>
           </Box>
           <MotionButton

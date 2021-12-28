@@ -13,9 +13,97 @@
   animation-name: rubberBand;
 }
 
-.myname { 
+.myname{ 
   background: linear-gradient(to right,rgb(23, 126, 126),rgb(2rgb(94, 1, 94) 117),purple) ;
   background-clip: text;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.myname{
+  width: max-content;
+  position: relative;
+}
+
+.myname::after,
+.myname::before{
+  content: '';
+  top:0;
+  left:0;
+  bottom:0;
+  right: 0;
+  position: absolute;
+}
+
+.myname::before{
+  background: #56edd6;
+  animation: typewriter 4s steps(14) 1s forwards;
+}
+
+.myname:after{
+  width: 0.125em;
+  background: black;
+  animation: typewriter 4s steps(14) 1s forwards,
+              blinking 750ms infinite;
+}
+
+@keyframes typewriter {
+  to{
+    left: 100%;
+    background: #56edd6;
+  }
+}
+
+@keyframes blinking {
+  to{
+    background-color: #56edd6;
+  }
+}
+
+/* For Dark */
+.myname_dark{ 
+  background: linear-gradient(to right,rgb(23, 126, 126),rgb(2rgb(94, 1, 94) 117),purple) ;
+  background-clip: text;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.myname_dark{
+  width: max-content;
+  position: relative;
+}
+
+.myname_dark::after,
+.myname_dark::before{
+  content: '';
+  top:0;
+  left:0;
+  bottom:0;
+  right: 0;
+  position: absolute;
+}
+
+.myname_dark::before{
+  background: #252525;
+  animation: typewriter_dark 4s steps(14) 1s forwards;
+}
+
+.myname_dark:after{
+  width: 0.125em;
+  background: white;
+  animation: typewriter_dark 4s steps(14) 1s forwards,
+              blinking_dark 750ms infinite;
+}
+
+@keyframes typewriter_dark {
+  to{
+    left: 100%;
+    background: #252525;
+  }
+}
+
+@keyframes blinking_dark {
+  to{
+    background-color: #252525;
+  }
 }
 
 @keyframes rubberBand {
