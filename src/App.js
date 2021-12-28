@@ -121,7 +121,7 @@ function App() {
               // bgGradient={isDark ? "linear(to-r,cyan.400,blue.400,purple.400)" : "linear(to-r,cyan.800,blue.800,purple.800)" } 
               // bgClip="text" 
               alignSelf="self-start">
-              <div >
+              <div className="name">
                 <h1 className={isDark ? 'myname_dark' : "myname"}>PRAJWAL RAMESH</h1>
                 {/* <motion.span 
                   className="letter"
