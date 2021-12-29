@@ -146,7 +146,7 @@ function App() {
               color={isDark ? "#08fdd8" : "#1d1d1d"}>
                 <Typewriter
                   options={{
-                    strings: ['Student', 'Full Stack Developer','F1 Fan','No Mikel no!!'],
+                    strings: ['Student', 'Developer','No Michael no!!'],
                     autoStart: true,
                     loop: true,
                     delay:2,
