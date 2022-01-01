@@ -81,7 +81,7 @@ function App() {
           <Flex 
           padding="5" 
           width="100%" 
-          bgColor={isDark ? "#08fdd8" : "#1d1d1d"}
+          background={isDark ? "linear-gradient(80deg,rgb(0, 199, 199),rgb(0, 109, 109));" : "#1d1d1d"}
           color={isDark ? "white" : "#10141c"}>
             <Text 
             fontSize={isNotSmallerScreen ? "3xl" : "lg"} 
