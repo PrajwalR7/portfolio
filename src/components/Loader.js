@@ -16,7 +16,7 @@ export default function Loader() {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   return (
-    <div>
+    <div className="outer-main">
       <div className='main-bg'>
         <div className='text-bg'>Welcome</div>
         {/* <div className='content-bg'> */}
