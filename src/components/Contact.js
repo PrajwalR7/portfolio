@@ -45,7 +45,7 @@ export default function Contact(props) {
     <Flex ref={props.refernce} width="100%" direction={isNotSmallerScreen ? "row" : "column"}>
       <VStack width={isNotSmallerScreen ? "50%" : "100%"}>
         <Heading mb="4" mt="10" fontSize={isNotSmallerScreen ? "3xl" : "lg"}  
-        color={isDark ? "#08fdd8" : "#1d1d1d"}>
+        color={isDark ? "#66fcf1" : "#05386B"} >
           <span className="letter">C</span>
           <span className="letter">o</span>
           <span className="letter">n</span>
@@ -110,6 +110,9 @@ export default function Contact(props) {
             // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
             placeholder='Message' width="96%" ml="2" alignSelf="center" mt="7"></Textarea>
             <Button
+            backgroundColor={isDark ? "#66fcf1" : "#edf5e1"}
+            color={isDark ? "black" : "#05386B"}
+            fontFamily="'Sora', sans-serif"
             mb="10"
             _hover={{
               backgroundColor:isDark ? "white" : "#1d1d1d",

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useRef} from 'react'
 import { 
   Flex,
   Heading,
@@ -13,6 +13,7 @@ import {motion,useAnimation} from 'framer-motion'
 export default function Skills() {
 
   const animationHeading = useAnimation();
+  const animationFront = useAnimation();
   const animationText = useAnimation();
   const animationProgress = useAnimation();
   const [refHeading,inViewHeading] = useInView({triggerOnce:true,threshold:0.45});
@@ -24,8 +25,8 @@ export default function Skills() {
   let isDark = colorMode === 'dark';
 
   useEffect(() => {
+    console.log(inViewHeading);
     if(inViewHeading){
-      console.log(inViewHeading);
       animationHeading.start({
         opacity:1,
         x:0,
@@ -42,17 +43,13 @@ export default function Skills() {
           duration:0.8
         }
       });
-      // animationProgress.start({
-      //   va
-      // })
     }
-  },[inViewHeading])
+  },[animationHeading, animationText, inViewHeading])
 
   return (
     <Flex 
-      // py="30"
       paddingBottom="10"
-      backgroundColor={isDark ? "#1d1d1d" : "#16e7c7b8"}  
+      backgroundColor={isDark ? "#1f2833" : "#8ee4af"}  
       width="100%" 
       direction={isNotSmallerScreen ? "row" : "column"}>
         <Box 
@@ -65,7 +62,7 @@ export default function Skills() {
             fontSize={isNotSmallerScreen ? "20px" : "lg"}
             ml={isNotSmallerScreen ? "14" : "2"}
             alignSelf="flex-start" 
-            color={isDark ? "#08fdd8" : "#1d1d1d"} >
+            color={isDark ? "#66fcf1" : "#05386B"}  >
               <span className='letter'>S</span>
               <span className='letter'>k</span>
               <span className='letter'>i</span>
@@ -110,7 +107,7 @@ export default function Skills() {
             <MotionProgress 
               colorScheme="cyan" 
               width="80%" 
-              value={inViewHeading ? 50 : 0} 
+              value={30}
               size="xs" />
             <Text 
               mt="10" 
@@ -124,10 +121,12 @@ export default function Skills() {
               mt="10" 
               fontSize="lg" 
               mb="2">Frontend</Text>
-            <Progress 
+            <MotionProgress 
+              initial={{value:0}}
+              animate={animationFront}
               colorScheme="red" 
-              width="80%" 
-              value={35} 
+              width="80%"
+              value={35}
               size="xs" />
             <Text 
               mt="10" 

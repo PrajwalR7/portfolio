@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&family=Shizuru&display=swap');
 .letter{
+  /* color: #05386B; */
   animation-duration: 700ms;
   animation-fill-mode: both;
   animation-iteration-count: 1;
   display: inline-block;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Sora', sans-serif;
+  font-weight: lighter;
 }
 .letter:hover{
   color: orange;
@@ -12,11 +14,13 @@
 }
 
 .name{ 
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Rubik Mono One', sans-serif;
+  letter-spacing: 4px;
+  font-weight: lighter;
 }
 
 .myname{
-  color:rgb(0, 112, 112);
+  color:#05386B;
   width: max-content;
   position: relative;
 }
@@ -32,7 +36,7 @@
 }
 
 .myname::before{
-  background: #56edd6;
+  background: #5cdb95;
   animation: typewriter 4s steps(14) 1s forwards;
 }
 
@@ -46,13 +50,13 @@
 @keyframes typewriter {
   to{
     left: 100%;
-    background: #56edd6;
+    background: #5cdb95;
   }
 }
 
 @keyframes blinking {
   to{
-    background-color: #56edd6;
+    background-color: #5cdb95;
   }
 }
 
@@ -75,7 +79,7 @@
 }
 
 .myname_dark::before{
-  background: #252525;
+  background: #0b0c10;
   animation: typewriter_dark 4s steps(14) 1s forwards;
 }
 
@@ -170,6 +174,12 @@
   animation: barload 3s 1s linear forwards;
 }
 
+@keyframes react-move {
+  to{
+    width:45%;
+  }
+}
+
 @keyframes barload {
   to{
     width: 100%;
@@ -226,13 +236,13 @@
 @keyframes typewriter_dark {
   to{
     left: 100%;
-    background: #252525;
+    background: #0b0c10;
   }
 }
 
 @keyframes blinking_dark {
   to{
-    background-color: #252525;
+    background-color: #0b0c10;
   }
 }
 

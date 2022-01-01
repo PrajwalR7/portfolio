@@ -25,14 +25,14 @@ export default function Profile() {
     <Flex 
       alignItems="center" 
       justifyContent="center" 
-      backgroundColor={isDark ? "#1d1d1d" : "#16e7c7b8"} 
+      backgroundColor={isDark ? "#1f2833" : "#8ee4af"} 
       width="100%" 
       spacing="200px" 
       direction={isNotSmallerScreen ? "column" : "column"}>
         <Heading 
           fontSize={isNotSmallerScreen ? "3xl" : "lg"} 
           mt="14"  
-          color={isDark ? "#08fdd8" : "#1d1d1d"} 
+          color={isDark ? "#66fcf1" : "#05386B"} 
           alignSelf="center" 
           mb={12}>
             <span className="letter">P</span>
@@ -45,6 +45,7 @@ export default function Profile() {
             <span className="letter">S</span>
         </Heading>
       <Wrap 
+      fontFamily="'Sora', sans-serif"
         mb="16" 
         justify="center" 
         alignItems="center" 
@@ -54,12 +55,13 @@ export default function Profile() {
             onClick={() => window.location.href="https://www.npmjs.com/package/cli-reddit"} 
             alignSelf="center">
               <Box
-                backgroundColor={isDark ? "white" : "gray.200"}
+                backgroundColor={isDark ? "white" : "#edf5e1"}
                 borderWidth="1px" 
                 borderRadius="lg"
-                width="350px"
+                border="1px solid #d9d9d9"
+                width="380px"
                 _hover={{
-                  backgroundColor:"white",
+                  backgroundColor:"snow",
                   cursor:"pointer",
                   transform:'scale(1.1)',
                   color:'#1a202c'
@@ -74,7 +76,7 @@ export default function Profile() {
                     <Box p="6">
                       <Box display="flex">
                         <Text 
-                          fontSize="lg" 
+                          fontSize="md" 
                           color="#10141c" 
                           mr="5">Tech Used</Text>
                         <Badge 
@@ -90,7 +92,7 @@ export default function Profile() {
                       backgroundColor="#d6d6d6">
                         <Text 
                           textAlign="center" 
-                          fontSize="lg" 
+                          fontSize="md" 
                           color="#10141c">
                           Command line interface for reddit (npm package)
                         </Text>
@@ -101,10 +103,10 @@ export default function Profile() {
           <WrapItem 
             onClick={() => window.location.href="https://github.com/PrajwalR7/Soap_search"}>
               <Box
-                backgroundColor={isDark ? "white" : "gray.200"}
+                backgroundColor={isDark ? "white" : "#edf5e1"}
                 borderWidth="1px" 
                 borderRadius="lg"
-                width="350px"
+                width="380px"
                 _hover={{
                   backgroundColor:"white",
                   cursor:"pointer",
@@ -120,7 +122,7 @@ export default function Profile() {
                     <Box p="6">
                       <Box display="flex">
                         <Text 
-                          fontSize="lg" 
+                          fontSize="md" 
                           color="#10141c" 
                           mr="5">Tech Used</Text>
                         <Badge 
@@ -148,7 +150,7 @@ export default function Profile() {
                       backgroundColor="#d6d6d6">
                         <Text 
                           textAlign="center" 
-                          fontSize="lg" 
+                          fontSize="md" 
                           color="#10141c">
                             Basic search engine for movie webiste SoapSearch
                         </Text>
@@ -158,10 +160,10 @@ export default function Profile() {
           </WrapItem>
           <WrapItem onClick={() => window.location.href="https://github.com/PrajwalR7/Audio-Text"}>
             <Box
-                backgroundColor={isDark ? "white" : "gray.200"}
+                backgroundColor={isDark ? "white" : "#edf5e1"}
                 borderWidth="1px" 
                 borderRadius="lg"
-                width="350px"
+                width="380px"
                 _hover={{
                   backgroundColor:"white",
                   cursor:"pointer",
@@ -206,7 +208,7 @@ export default function Profile() {
                       backgroundColor="#d6d6d6">
                         <Text 
                           textAlign="center" 
-                          fontSize="lg" 
+                          fontSize="md" 
                           color="#10141c">
                             Audio to text converter using DeepGram API
                         </Text>
@@ -217,10 +219,10 @@ export default function Profile() {
           <WrapItem alignSelf="center">
             <Box
               onClick={() => null}
-              backgroundColor={isDark ? "white" : "gray.200"}
+              backgroundColor={isDark ? "white" : "#edf5e1"}
               borderWidth="1px" 
               borderRadius="lg"
-              width="350px"
+              width="380px"
               _hover={{
                 backgroundColor:"white",
                 cursor:"not-allowed",
@@ -265,7 +267,7 @@ export default function Profile() {
                   backgroundColor="#d6d6d6">
                     <Text 
                       textAlign="center" 
-                      fontSize="lg" 
+                      fontSize="md" 
                       color="#10141c">
                         Chat Application using webSockets. Still working on it :)
                     </Text>

@@ -62,22 +62,23 @@ export default function About() {
   return (
     <Flex 
     // ref={ref} initial={{x:-500}} animate={animationHeading}
-      backgroundColor={isDark ? "#252525" : "#56edd6"} 
+      backgroundColor={isDark ? "#0b0c10" : "#5cdb95"} 
       width="100%" 
       padding="5" 
+      
       direction={isNotSmallerScreen ? "row" : "column"}>
       <Box
         // ref={ref} initial={{x:-500}} animate={animationHeading}
         width={isNotSmallerScreen ? "40%" : "100%"}>
         <MotionHeading 
+        color={isDark ? "#66fcf1" : "#05386B"} 
         ref={refHeading} 
         mt="10"
         initial={{opacity:0,x:-100}} 
         animate={animationHeading}
         fontSize={isNotSmallerScreen ? "4xl" :"lg"}
         ml={isNotSmallerScreen ? "16" : 0}
-        alignSelf="flex-start" 
-        color={isDark ? "#08fdd8" : "#1d1d1d"} >
+        alignSelf="flex-start"  >
           <span className='letter'>M</span>
           <span className='letter'>e</span>
           <span>,</span>

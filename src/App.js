@@ -77,24 +77,27 @@ function App() {
       >
         
         <VStack 
-        backgroundColor={isDark ? "#252525" : "#16e7c7b8"}>
+        backgroundColor={isDark ? "#0b0c10" : "#5cdb95"}>
           <Flex 
           padding="5" 
           width="100%" 
-          background={isDark ? "linear-gradient(80deg,rgb(0, 199, 199),rgb(0, 109, 109));" : "#1d1d1d"}
+          // background={isDark ? "linear-gradient(80deg,rgb(0, 199, 199),rgb(0, 109, 109));" : "linear-gradient(80deg,rgb(54,76,76),rgb(19,42,42));"}
+          background={isDark ? "#66fcf1" : "#05386B"}
           color={isDark ? "white" : "#10141c"}>
             <Text 
+            fontFamily="'Sora', sans-serif"
+            fontWeight="thin"
             fontSize={isNotSmallerScreen ? "3xl" : "lg"} 
             ml={isNotSmallerScreen ? "10" : 0}
             alignSelf={isNotSmallerScreen ? "flex-start" : "center"} 
-            color={isDark ? "#1d1d1d" : "#08fdd8"}>Welcome</Text>
+            color={isDark ? "#1d1d1d" : "#edf5e1"}>Welcome</Text>
             
             {/* {
               isNotSmallerScreen ?  */}
               <>
                 <Spacer></Spacer>
                 <IconButton 
-                backgroundColor={isDark ? "#1a202c" : "white"} 
+                backgroundColor={isDark ? "#1a202c" : "#f2f2f2"} 
                 color={isDark ? "white" : "#1a202c"} 
                 icon={isDark ? <FaSun /> : <FaMoon />} 
                 onClick={toggleColorMode} 
@@ -108,12 +111,13 @@ function App() {
           spacing="200px" 
           width="100%" 
           direction={isNotSmallerScreen ? "column" : "column"}
-          backgroundColor={isDark ? "#252525" : "#56edd6"}>
+          backgroundColor={isDark ? "#0b0c10" : "#5cdb95"}>
             <Box 
             width="100%" 
             alignSelf="center" 
             mt={isNotSmallerScreen ? 0 : 16}>
               <MotionText 
+              fontFamily="'Sora', sans-serif"
               initial={{
                 x:'-100vw'
               }}
@@ -158,10 +162,11 @@ function App() {
                   stiffness:120
                 }}
                 
-                fontSize={isNotSmallerScreen ? "3xl" : "2xl" } 
+                fontSize={isNotSmallerScreen ? "3xl" : "lg" } 
                 mr="5" 
                 color={isDark ? "#08fdd8" : "#1d1d1d"}>
                   <Typewriter
+                  fontFamily="'Sora', sans-serif"
                     options={{
                       strings: ['Student', 'Developer','No Michael no!!'],
                       autoStart: true,
@@ -173,6 +178,9 @@ function App() {
               </MotionText>
             </Box>
             <MotionButton
+            fontFamily="'Sora', sans-serif"
+            backgroundColor={isDark ? "#66fcf1" : "#edf5e1"}
+            color={isDark ? "black" : "#05386B"}
             onClick={() => scrollTo(contactRef)} 
             initial={{opacity:0}} 
             animate={{opacity:1}} 
@@ -180,8 +188,8 @@ function App() {
             mt="10" 
             width={isNotSmallerScreen ? "15%" : "50%"}
             _hover={{
-              backgroundColor:isDark ? "white" : "#1d1d1d",
-              color:isDark ? "#10141c" : "white",
+              backgroundColor:isDark ? "white" : "white",
+              color:isDark ? "#10141c" : "#05386B",
               transform:"scale(1.1)"
             }}
             transition="all 300ms linear"
