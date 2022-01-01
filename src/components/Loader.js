@@ -17,7 +17,14 @@ export default function Loader() {
 
   return (
     <div>
-      <HStack 
+      <div className='main-bg'>
+        <div className='text-bg'>Welcome</div>
+        {/* <div className='content-bg'> */}
+          <div className='title-bg'>To my portfolio</div>
+          <div className='bar-bg'></div>
+        {/* </div> */}
+      </div>
+      {/* <HStack 
       backgroundColor="black"
       w="100%"
       h="100vh"
@@ -32,7 +39,7 @@ export default function Loader() {
         <Text
         className='Ramesh'
         fontWeight="extrabold" color="teal"p={isNotSmallerScreen ? "5" : "2"} fontFamily="'Exo', sans-serif" fontSize={isNotSmallerScreen ? "5xl" : "2xl"}>Ramesh</Text>
-      </HStack>
+      </HStack> */}
     </div>
   )
 }

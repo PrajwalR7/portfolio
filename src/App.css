@@ -108,6 +108,114 @@
   animation: Ramesh 1s linear 500ms forwards;
 }
 
+.main-bg{
+  background-image: url(./resources/bg1.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-clip: text;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  background-color: black;
+  /* background: linear-gradient(80deg,#110e1f,#1b1730); */
+  position: fixed;
+  top:0;
+  left: 0;
+  animation:anim1 1.25s infinite,anim2 10s forwards;
+}
+
+/* .content-bg{
+  height:20%;
+  width:100%;
+  position: absolute;
+  top:60%;
+  left:50%;
+  justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  transform:translate(-50%,-50%);
+} */
+
+.text-bg{
+  width: 100%;
+  /* height: 100vh; */
+  /* background-image: url(./resources/bg1.jpg);
+  background-size: 100% 100%;
+  background-position: center; */
+  /* position: absolute; */
+  /* font-family: 'Vujahday Script', cursive; */
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 125px;
+  text-align: center;
+  /* line-height: 5.5em; */
+  /* top:55%;
+  left:50%; */
+  /* transform:translate(-50%,-50%) rotate(-5deg); */
+  color: transparent;
+  -webkit-background-clip: text;
+  pointer-events: none;
+  
+}
+
+.title-bg{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  font-size: 12px;
+  color:rgb(92, 92, 92);
+  letter-spacing: 5px;
+  /* top:60%;
+  left:50%; */
+} 
+
+.bar-bg{
+  width:175px;
+  height: 2px;
+  background-color: #999999;
+  position: relative;
+  z-index: 9999;
+}
+
+.bar-bg::after{
+  width: 0%;
+  height: 100%;
+  content: '';
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: rgb(19, 19, 19);
+  animation: barload 3s 1s linear forwards;
+}
+
+@keyframes barload {
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes anim1 {
+  0%{background-image :url(./resources/bg1.jpg);}
+  10%{background-image :url(./resources/bg2.jpg);}
+  20%{background-image :url(./resources/bg3.jpg);}
+  30%{background-image :url(./resources/bg4.jpg);}
+  40%{background-image :url(./resources/bg5.jpg);}
+  50%{background-image :url(./resources/bg6.jpg);}
+  60%{background-image :url(./resources/bg7.jpg);}
+  70%{background-image :url(./resources/bg8.jpg);}
+  80%{background-image :url(./resources/bg9.jpg);}
+  90%{background-image :url(./resources/bg5.jpg);}
+  100%{background-image :url(./resources/bg10.jpg);}
+}
+
+@keyframes anim2 {
+  from{color: #d2006b;}
+  to{color:transparent}
+}
+
 @keyframes Prajwal {
   50%{
     opacity: 0.25;
@@ -194,5 +302,13 @@
   .middle-carat{
     width:0.1em;
     height:3em;
+  }
+  .text-bg{
+    font-size: 50px;
+    /* top:50%;
+    line-height: 10em; */
+  }
+  .content-bg{
+    top:50%;
   }
 }

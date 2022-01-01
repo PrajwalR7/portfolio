@@ -52,7 +52,7 @@ function App() {
   const loaderFunc = () => {
     setTimeout(() => {
       isLoaderTrue(false);
-    },2000)
+    },4000)
     return <Loader />
   }
 
