@@ -25,7 +25,7 @@ import Loader from './components/Loader';
 
 function App() {
   
-  const [loader,isLoaderTrue] = useState(false);
+  const [loader,isLoaderTrue] = useState(true);
   const contactRef = useRef(null);
   const MotionText = motion(Text);
   const MotionButton = motion(Button);
