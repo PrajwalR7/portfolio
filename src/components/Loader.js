@@ -13,7 +13,6 @@ import {useMediaQuery} from '@chakra-ui/media-query';
 
 export default function Loader() {
 
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   return (
     <div className="outer-main">

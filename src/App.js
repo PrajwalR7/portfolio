@@ -51,9 +51,9 @@ function App() {
   }
 
   const loaderFunc = () => {
-    // setTimeout(() => {
-    //   isLoaderTrue(false);
-    // },4000)
+    setTimeout(() => {
+      isLoaderTrue(false);
+    },4000)
     return <Loader />
   }
 
