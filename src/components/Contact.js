@@ -24,6 +24,7 @@ export default function Contact(props) {
 
   const { colorMode,toggleColorMode } = useColorMode();
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  const [isNotmediumScreen] = useMediaQuery("(min-width:1100px)");
   let isDark = colorMode === 'dark';
   const MotionBox = motion(Box);
   const {ref,inView} = useInView({triggerOnce:true,threshold:0.45});
@@ -42,8 +43,10 @@ export default function Contact(props) {
   },[inView])
 
   return (
-    <Flex ref={props.refernce} width="100%" direction={isNotSmallerScreen ? "row" : "column"}>
-      <VStack width={isNotSmallerScreen ? "50%" : "100%"}>
+    <Flex justify="center" ref={props.refernce} width="100%" direction={isNotSmallerScreen && isNotmediumScreen ? "row" :  "column"}
+    wrap={isNotmediumScreen && isNotSmallerScreen ? "wrap" : "nowrap"}
+    >
+      <VStack width={isNotSmallerScreen && isNotmediumScreen ?  "50%" : "100%"}>
         <Heading mb="4" mt="10" fontSize={isNotSmallerScreen ? "3xl" : "lg"}  
         color={isDark ? "#66fcf1" : "#05386B"} >
           <span className="letter">C</span>
@@ -110,6 +113,7 @@ export default function Contact(props) {
             // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
             placeholder='Message' width="96%" ml="2" alignSelf="center" mt="7"></Textarea>
             <Button
+            fontSize={isNotmediumScreen ? "" : "sm"}
             backgroundColor={isDark ? "#66fcf1" : "#edf5e1"}
             color={isDark ? "black" : "#05386B"}
             fontFamily="'Sora', sans-serif"
@@ -119,7 +123,7 @@ export default function Contact(props) {
               color:isDark ? "#10141c" : "white",
               transform:"translate(8px,0) scale(1.1)"
             }}
-            transform={'translateX(8px)'} mt="6" alignSelf={isNotSmallerScreen ? "flex-start" : "center" } justify="flex-start" p="6">Send Message!</Button>
+            transform={'translateX(8px)'} mt="6" alignSelf={isNotSmallerScreen ? "flex-start" : "center" } justify="flex-start" p={isNotmediumScreen ? "6" : "3"}>Send Message!</Button>
             <Flex width="100%" direction="row" justify="center">
               <Icon 
                _hover={{
@@ -128,7 +132,7 @@ export default function Contact(props) {
                 transform:'scale(1.1)'
               }} 
               transition="all 200ms linear"
-              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"}
+              w={isNotSmallerScreen? (isNotmediumScreen ? "40px" : "30px") : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? (isNotmediumScreen ? "10" : "6") : "4"}
               onClick={() => window.location.href="https://github.com/PrajwalR7"} as={FaGithub} />
               <Icon 
                _hover={{
@@ -137,7 +141,7 @@ export default function Contact(props) {
                 transform:'scale(1.1)'
               }} 
               transition="all 200ms linear"
-              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"} 
+              w={isNotSmallerScreen? (isNotmediumScreen ? "40px" : "30px")  : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? (isNotmediumScreen ? "10" : "6") : "4"} 
               onClick={() => window.location.href="https://www.linkedin.com/in/prajwal-ramesh-918a84187/"} as={FaLinkedin} />
               <Icon 
                _hover={{
@@ -146,7 +150,7 @@ export default function Contact(props) {
                 transform:'scale(1.1)'
               }} 
               transition="all 200ms linear"
-              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"}
+              w={isNotSmallerScreen? (isNotmediumScreen ? "40px" : "30px")  : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? (isNotmediumScreen ? "10" : "6") : "4"}
               onClick={() => window.location.href="https://stackoverflow.com/users/16412216/prajwal-ramesh"} as={FaStackOverflow} />
               <Icon 
                _hover={{
@@ -155,7 +159,7 @@ export default function Contact(props) {
                 transform:'scale(1.1)'
               }} 
               transition="all 200ms linear"
-              w={isNotSmallerScreen? "40px" : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? "10" : "4"} as={FaInstagram} />
+              w={isNotSmallerScreen? (isNotmediumScreen ? "40px" : "30px")  : "30px"} h={isNotSmallerScreen? "40px" : "30px"} margin={isNotSmallerScreen ? (isNotmediumScreen ? "10" : "6") : "4"} as={FaInstagram} />
             </Flex>
           </Flex>
         </Flex>
@@ -163,8 +167,8 @@ export default function Contact(props) {
 
       <MotionBox
       ref={ref}
-      initial={{opacity:0}}
-      animate={animation} 
+      // initial={{opacity:0}}
+      // animate={animation} 
       mt={isNotSmallerScreen ? 0 : "5"}>
         <MapContainer 
         center={[12.97, 77.59]} 

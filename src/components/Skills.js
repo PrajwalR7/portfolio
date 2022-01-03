@@ -22,6 +22,7 @@ export default function Skills() {
   const MotionText = motion(Text);
   const { colorMode,toggleColorMode } = useColorMode();
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  const [isNotmediumScreen] = useMediaQuery("(min-width:1100px)");
   let isDark = colorMode === 'dark';
 
   useEffect(() => {
@@ -88,7 +89,7 @@ export default function Skills() {
             animate={animationText}
             ml={isNotSmallerScreen ? "14" : "4"} 
             mt="4" 
-            fontSize="lg" 
+            fontSize={isNotmediumScreen ? "lg" : "md"} 
             mr="6">
                 Since beginning my journey as a Full-Stack developer, I’ve done several personal projects which I unfortunatley lost, and collaborated with talented people to create web products.
                 I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, React, CSS, Chakra-UI and Material UI building small and medium web apps, and small packages, animations, and coding interactive layouts.

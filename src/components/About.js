@@ -57,6 +57,7 @@ export default function About() {
   const MotionImage = motion(Image);
   const { colorMode,toggleColorMode } = useColorMode();
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  const [isNotmediumScreen] = useMediaQuery("(min-width:1100px)");
   let isDark = colorMode === 'dark';
 
   return (
@@ -76,8 +77,8 @@ export default function About() {
         mt="10"
         initial={{opacity:0,x:-100}} 
         animate={animationHeading}
-        fontSize={isNotSmallerScreen ? "4xl" :"lg"}
-        ml={isNotSmallerScreen ? "16" : 0}
+        fontSize={isNotSmallerScreen ? (isNotmediumScreen ? "4xl" : "2xl") :"lg"}
+        ml={isNotSmallerScreen ? (isNotmediumScreen ? "16" : "10") : 0}
         alignSelf="flex-start"  >
           <span className='letter'>M</span>
           <span className='letter'>e</span>
@@ -97,8 +98,8 @@ export default function About() {
         <MotionText 
           initial={{opacity:0,y:100}} 
           animate={animationText} 
-          ml={isNotSmallerScreen ? "16" : 0} 
-          fontSize="lg" 
+          ml={isNotSmallerScreen ? (isNotmediumScreen ? "16" : "10") : 0} 
+          fontSize={isNotmediumScreen ? "lg" : "md"} 
           mt="6">
             I'm a Full-Stack Developer located in India (Bangalore, Karnataka). I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
             I'm currently purusing my Bachelor's Degree in Computer Science at Visvesvaraya Technological University (3rd year)

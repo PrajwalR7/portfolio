@@ -25,12 +25,13 @@ import Loader from './components/Loader';
 
 function App() {
   
-  const [loader,isLoaderTrue] = useState(true);
+  const [loader,isLoaderTrue] = useState(false);
   const contactRef = useRef(null);
   const MotionText = motion(Text);
   const MotionButton = motion(Button);
   const { colorMode,toggleColorMode } = useColorMode();
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+  const [isNotmediumScreen] = useMediaQuery("(min-width:1100px)");
   let isDark = colorMode === 'dark';
   const toast = useToast();
 
@@ -107,7 +108,7 @@ function App() {
             } */}
           </Flex>
           <Flex 
-          padding={isNotSmallerScreen ? "32" : "12"} 
+          padding={isNotSmallerScreen ? (isNotmediumScreen ? "32" : "24") : "12"} 
           spacing="200px" 
           width="100%" 
           direction={isNotSmallerScreen ? "column" : "column"}
@@ -130,14 +131,14 @@ function App() {
                 type:"spring",
                 stiffness:120
               }}
-              fontSize={isNotSmallerScreen ? "6xl" : "2xl"} 
+              fontSize={isNotSmallerScreen ? (isNotmediumScreen ? "6xl" : "3xl") : "2xl"} 
               fontWeight="semibold" 
               alignSelf="flex-start">Hi, I'm</MotionText>
               <MotionText
                 mt={isNotSmallerScreen ? 0 : "2"}
                 mb={isNotSmallerScreen ? 0 : "5"}
                 
-                fontSize={isNotSmallerScreen ? "6xl" : "lg"} 
+                fontSize={isNotSmallerScreen ? (isNotmediumScreen ? "6xl" :  "3xl") : "lg"} 
                 fontWeight="bold" 
                 // bgGradient={isDark ? "linear(to-r,cyan.400,blue.400,purple.400)" : "linear(to-r,cyan.800,blue.800,purple.800)" } 
                 // bgClip="text" 
@@ -162,7 +163,7 @@ function App() {
                   stiffness:120
                 }}
                 
-                fontSize={isNotSmallerScreen ? "3xl" : "lg" } 
+                fontSize={isNotSmallerScreen ? (isNotmediumScreen ? "3xl" : "2xl") : "lg" } 
                 mr="5" 
                 color={isDark ? "#08fdd8" : "#1d1d1d"}>
                   <Typewriter
@@ -186,7 +187,7 @@ function App() {
             animate={{opacity:1}} 
             alignSelf={isNotSmallerScreen ? "flex-start" :"center"} 
             mt="10" 
-            width={isNotSmallerScreen ? "15%" : "50%"}
+            width={isNotSmallerScreen ? (isNotmediumScreen ? "15%" : "35%") : "50%"}
             _hover={{
               backgroundColor:isDark ? "white" : "white",
               color:isDark ? "#10141c" : "#05386B",
