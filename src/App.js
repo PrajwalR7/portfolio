@@ -35,16 +35,16 @@ function App() {
   let isDark = colorMode === 'dark';
   const toast = useToast();
 
-  useEffect(() => {
-    console.log('in useEffect')
-    toast({
-      position:'bottom-right',
-      title:'Welcome to my portfolio',
-      status:'info',
-      duration:2000,
-      isClosable:false
-    })
-  },[])
+  // useEffect(() => {
+  //   console.log('in useEffect')
+  //   toast({
+  //     position:'bottom-right',
+  //     title:'Welcome to my portfolio',
+  //     status:'info',
+  //     duration:2000,
+  //     isClosable:false
+  //   })
+  // },[])
   
   const scrollTo = (givenRef) => {
     window.scrollTo(0,givenRef.current.offsetTop)
