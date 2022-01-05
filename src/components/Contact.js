@@ -94,7 +94,7 @@ export default function Contact(props) {
               // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
               type="email" placeholder='Email' width="100%" size="lg"/>
             </InputGroup>
-            <InputGroup mt="5" width="98%" p="2" alignSelf="center" >
+            <InputGroup  width={isNotSmallerScreen ? "98%" : "100%"} p="2" alignSelf="center" >
               <Input
               focusBorderColor=""
               color="white"
@@ -102,7 +102,7 @@ export default function Contact(props) {
               outlineOffset={0}
               colorScheme={isDark ? "#08fdd8" : "#1d1d1d"}
               // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
-              type="text" placeholder='Subject' width="100%" size="lg"/>
+              type="text" placeholder='Subject' size="lg"/>
             </InputGroup>
             <Textarea 
             focusBorderColor=""
@@ -111,7 +111,8 @@ export default function Contact(props) {
             outlineOffset={0}
             colorScheme={isDark ? "#08fdd8" : "#1d1d1d"}
             // outlineColor={isDark ? "#08fdd8" : "#1d1d1d"}
-            placeholder='Message' width="96%" ml="2" alignSelf="center" mt="7"></Textarea>
+            placeholder='Message' width={isNotSmallerScreen ? "96.5%" : "97.5%"} ml={isNotSmallerScreen ? "2" : "0"}
+            alignSelf="center" mt="2"></Textarea>
             <Button
             fontSize={isNotmediumScreen ? "" : "sm"}
             backgroundColor={isDark ? "#66fcf1" : "#edf5e1"}
