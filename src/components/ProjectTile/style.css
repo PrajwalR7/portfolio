@@ -26,6 +26,7 @@
 }
 
 #popup {
+  font-size: large;
   z-index: 99999;
   display: flex;
   justify-content: center;
@@ -73,9 +74,11 @@
 }
 
 #button {
+  font-size: small;
+  border-radius: 200px;
   position: relative;
   margin: 20px;
-  padding: 5px 20px 5px 20px;
+  padding: 15px 35px 15px 35px;
   color: white;
   border: 1px solid white;
   transition: all 0.5s ease;
