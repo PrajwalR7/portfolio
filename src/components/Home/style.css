@@ -1,0 +1,8 @@
+#home-container {
+  padding-top: 3rem;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+}

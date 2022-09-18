@@ -1,0 +1,288 @@
+#skills-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skillbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+}
+
+.skillbox img {
+  width: 300px;
+  height: 300px;
+  transform: scale(0.75);
+  transition: all 0.4s ease-in-out;
+  /* border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 2px solid white;
+  box-shadow: 0px 5px 5px white; */
+}
+
+#JS img {
+  /* transition: all 0.4s ease-in-out; */
+  filter: drop-shadow(3px 3px 10px yellow);
+  /* border: 0.5px solid yellow; */
+  /* box-shadow: inset 0px 0px 2px yellow; */
+  /* box-shadow: 0px 0px 10px yellow, 0px 0px 20px yellow, 0px 0px 40px yellow,
+    0px 0px 80px yellow, 0px 0px 160px yellow; */
+}
+
+#JS img:hover {
+  animation: jsanim 1s ease-in-out forwards;
+}
+
+#react img {
+  filter: drop-shadow(3px 3px 8px #00d8ff);
+  /* border: 0.5px solid #00d8ff; */
+  /* box-shadow: inset 0px 0px 2px #00d8ff; */
+  /* box-shadow: 0px 0px 10px #00d8ff, 0px 0px 20px #00d8ff, 0px 0px 40px #00d8ff,
+    0px 0px 80px #00d8ff, 0px 0px 160px #00d8ff; */
+}
+
+#react img:hover {
+  animation: reactanim 1s ease-in-out forwards;
+}
+
+#node img {
+  /* box-shadow: inset 0px 0px 2px #57a545; */
+  /* 0px 0px 80px #57a545, 0px 0px 160px #57a545; */
+}
+
+#node img:hover ~ #skills-container {
+  /* animation: nodeanim 1s ease-in-out forwards; */
+  background-color: #57a545;
+}
+
+#java img {
+  filter: drop-shadow(3px 3px 5px #e76f00);
+  z-index: 9999;
+  /* border: 0.5px solid #e76f00; */
+  /* box-shadow: inset 0px 0px 2px #e76f00; */
+  /* box-shadow: 0px 0px 10px #e76f00, 0px 0px 20px #e76f00, 0px 0px 40px #e76f00,
+    0px 0px 80px #e76f00, 0px 0px 160px #e76f00; */
+}
+
+#java img:hover {
+  animation: javaanim 1s ease-in-out forwards;
+}
+
+#mongo img {
+  filter: drop-shadow(3px 3px 10px #01ec64);
+  /* border: 0.5px solid #01ec64; */
+  /* box-shadow: inset 0px 0px 2px #01ec64; */
+  /* box-shadow: 0px 0px 10px #01ec64, 0px 0px 20px #01ec64, 0px 0px 40px #01ec64,
+    0px 0px 80px #01ec64, 0px 0px 160px #01ec64; */
+}
+
+#mongo img:hover {
+  animation: mongoanim 1s ease-in-out forwards;
+}
+
+#mysql img {
+  filter: drop-shadow(3px 3px 5px #00758f);
+  /* border: 0.5px solid #00758f; */
+  /* box-shadow: inset 0px 0px 2px #00758f; */
+  /* box-shadow: 0px 0px 10px #00758f, 0px 0px 20px #00758f, 0px 0px 40px #00758f,
+    0px 0px 80px #00758f, 0px 0px 160px #00758f; */
+}
+
+#mysql img:hover {
+  animation: mysqlanim 1s ease-in-out forwards;
+}
+
+#fire img {
+  filter: drop-shadow(3px 3px 10px #fcca3f);
+  /* border: 0.5px solid #fcca3f; */
+  /* box-shadow: inset 0px 0px 2px #fcca3f; */
+  /* box-shadow: 0px 0px 10px #fcca3f, 0px 0px 20px #fcca3f, 0px 0px 40px #fcca3f,
+    0px 0px 80px #fcca3f, 0px 0px 160px #fcca3f; */
+}
+
+#fire img:hover {
+  animation: fireanim 1s ease-in-out forwards;
+}
+
+#html img {
+  filter: drop-shadow(3px 3px 10px #f1662a);
+  /* border: 0.5px solid #f1662a; */
+  /* box-shadow: inset 0px 0px 2px #f1662a; */
+  /* box-shadow: 0px 0px 10px #f1662a, 0px 0px 20px #f1662a, 0px 0px 40px #f1662a,
+    0px 0px 80px #f1662a, 0px 0px 160px #f1662a; */
+}
+
+#html img:hover {
+  animation: htmlanim 1s ease-in-out forwards;
+}
+
+#css img {
+  filter: drop-shadow(3px 3px 10px #1572b6);
+  /* border: 0.5px solid #1572b6;
+  box-shadow: 0px 0px 10px #1572b6, 0px 0px 20px #1572b6, 0px 0px 40px #1572b6,
+    0px 0px 80px #1572b6, 0px 0px 160px #1572b6; */
+}
+
+#css img:hover {
+  animation: cssanim 1s ease-in-out forwards;
+}
+
+#head-skill {
+  font-size: 50px;
+  letter-spacing: rem;
+}
+
+.skillbox:hover {
+  transform: translate(1.2);
+}
+
+@keyframes jsanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px yellow, 0px 0px 20px yellow, 0px 0px 40px yellow;
+  }
+}
+
+@keyframes reactanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #00d8ff, 0px 0px 20px #00d8ff, 0px 0px 40px #00d8ff;
+  }
+}
+
+@keyframes javaanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #e76f00, 0px 0px 20px #e76f00, 0px 0px 40px #e76f00;
+  }
+}
+
+@keyframes nodeanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #57a545, 0px 0px 20px #57a545, 0px 0px 40px #57a545;
+  }
+}
+
+@keyframes mongoanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #01ec64, 0px 0px 20px #01ec64, 0px 0px 40px #01ec64;
+  }
+}
+
+@keyframes mysqlanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #00758f, 0px 0px 20px #00758f, 0px 0px 40px #00758f;
+  }
+}
+
+@keyframes fireanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #fcca3f, 0px 0px 20px #fcca3f, 0px 0px 40px #fcca3f;
+  }
+}
+
+@keyframes htmlanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #f1662a, 0px 0px 20px #fcca3f, 0px 0px 40px #f1662a;
+  }
+}
+
+@keyframes cssanim {
+  50% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+      0px 0px 80px white, 0px 0px 160px white;
+  }
+  100% {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0px 0px 10px #1572b6, 0px 0px 20px #1572b6, 0px 0px 40px #1572b6;
+  }
+}
