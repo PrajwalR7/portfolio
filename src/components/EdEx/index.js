@@ -27,7 +27,7 @@ export default function EdEx() {
 
   const exContent = [
     {
-      type: 'Software Development Intern',
+      type: 'SDE Intern',
       name: 'Ezyfi Pvt. Ltd.',
       time: 'Nov 2021 - Jan 2022',
     },
@@ -56,7 +56,7 @@ export default function EdEx() {
             <span
               id='head-span'
               style={{
-                fontSize: '1.3rem',
+                fontSize: '1.2rem',
                 marginLeft: '0.5rem',
                 marginRight: '2rem',
               }}
@@ -68,7 +68,7 @@ export default function EdEx() {
             <box-icon type='solid' name='briefcase-alt-2' size='md'></box-icon>
             <span
               id='head-span'
-              style={{ fontSize: '1.3rem', marginLeft: '0.5rem' }}
+              style={{ fontSize: '1.2rem', marginLeft: '0.5rem' }}
               onClick={() => timeLineHandler('ex')}>
               Experience
             </span>

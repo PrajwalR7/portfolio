@@ -69,3 +69,12 @@
   margin: 0;
   text-align: left;
 }
+
+@media screen and (max-width: 1000px) {
+  #project-container h2 {
+    font-size: 35px;
+  }
+  #project-container p {
+    font-size: 18px;
+  }
+}

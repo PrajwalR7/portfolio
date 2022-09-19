@@ -1,8 +1,10 @@
 import React from 'react';
 import './style.css';
 import profile from '../../resources/profile1.jpg';
+import { useMediaQuery } from '@chakra-ui/react';
 import 'boxicons';
 export default function RightSection() {
+  let [bigScreen] = useMediaQuery('(min-width:1000px)');
   return (
     <div id='right-sec'>
       <div id='right-left-sec'>
