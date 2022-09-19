@@ -9,7 +9,10 @@ export default function Skills() {
       </div>
       <div id='skill-content'>
         <div id='frontend'>
-          <h5>Frontend</h5>
+          <div id='end-head'>
+            <span>Frontend</span>
+          </div>
+          {/* <div id='front-content'> */}
           <li>
             <h6>JavaScript</h6>
             <p style={{ color: 'red', fontWeight: 500 }}>Advanced</p>
@@ -30,9 +33,12 @@ export default function Skills() {
             <h6>React-Native</h6>
             <p style={{ color: 'orange', fontWeight: 200 }}>Beginner</p>
           </li>
+          {/* </div> */}
         </div>
         <div id='backend'>
-          <h5>Backend</h5>
+          <div id='end-head'>
+            <span>Backend</span>
+          </div>
           <li>
             <h6>JavaScript</h6>
             <p style={{ color: 'red', fontWeight: 500 }}>Advanced</p>

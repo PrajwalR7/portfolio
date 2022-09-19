@@ -55,7 +55,8 @@ button {
   height: 4rem;
   padding: 0.7rem;
   font-size: 1rem;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
+  border: none;
 }
 
 #right-right-sec img {

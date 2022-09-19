@@ -14,3 +14,7 @@ ul,
 li {
   list-style: none;
 }
+
+.add-shadow {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}

@@ -8,8 +8,8 @@ export default function NavBar() {
         <li>Home</li>
         <li>About</li>
         <li>Ed&Ex</li>
-        <li>Projects</li>
         <li>Skills</li>
+        <li>Projects</li>
         <li>Contact</li>
       </ul>
     </nav>
