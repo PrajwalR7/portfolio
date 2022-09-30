@@ -132,6 +132,10 @@
   left: -8px;
 }
 
+#tl-item-cont h3 {
+  font-size: 40px;
+}
+
 #tl-item-cont h3,
 #tl-item-cont p {
   color: inherit;

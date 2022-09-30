@@ -27,7 +27,7 @@
   padding-right: 80px;
   /* width: 100%; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -50,10 +50,11 @@
 }
 
 #about-right-content p {
-  width: 70%;
-  font-size: 25px;
-  font-weight: 400;
+  width: 80%;
+  font-size: 20px;
+  font-weight: 200;
   text-align: left;
+  margin-bottom: 40px;
 }
 
 #about-right-content button {
