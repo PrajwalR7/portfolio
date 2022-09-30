@@ -13,7 +13,7 @@ nav {
 }
 
 nav span {
-  color: #3b3b3b;
+  color: inherit;
   font-size: 20px;
   font-weight: 500;
   margin-left: 20px;
@@ -30,11 +30,16 @@ nav ul {
 }
 
 nav ul li {
-  color: #3b3b3b;
+  color: #848484;
   font-weight: 400;
   margin-right: 20px;
   margin-left: 20px;
   font-size: 20px;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  color: black;
 }
 
 #menu-down {

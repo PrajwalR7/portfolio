@@ -3,8 +3,18 @@ import { useMediaQuery } from '@chakra-ui/react';
 import { homeRef } from '../Home';
 import './style.css';
 import 'boxicons';
+import Scroll, { Link } from 'react-scroll';
+
+const ScrollLink = Scroll.ScrollLink;
 export default function NavBar() {
   const [menuDown, setMenuDown] = useState(false);
+
+  // const handleClick = (e) => {
+  //   console.log('Hello');
+  //   e.preventDefault();
+  //   console.log(e.target);
+  //   e.target.style.color = 'black';
+  // };
 
   const menuHandler = () => {
     setMenuDown(!menuDown);
@@ -23,18 +33,36 @@ export default function NavBar() {
             </span>
           </div>
           <div id='menu-list'>
-            <li
-              onClick={window.scrollTo({
-                top: homeRef.current.offsetTop,
-                behavior: 'smooth',
-              })}>
-              Home
+            <li>
+              <Link to='home-link' spy={true} smooth={true} offset={-80}>
+                Home
+              </Link>
             </li>
-            <li>About</li>
-            <li>Ed & Ex</li>
-            <li>Skill</li>
-            <li>Project</li>
-            <li>Contact</li>
+            <li>
+              <Link to='about-link' spy={true} smooth={true} offset={-80}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to='edex-link' spy={true} smooth={true} offset={-80}>
+                Ed&Ex
+              </Link>
+            </li>
+            <li>
+              <Link to='skills-link' spy={true} smooth={true} offset={-80}>
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link to='project-link' spy={true} smooth={true} offset={-80}>
+                Project
+              </Link>
+            </li>
+            <li>
+              <Link to='contact-link' spy={true} smooth={true} offset={-50}>
+                Contact
+              </Link>
+            </li>
           </div>
         </div>
       )}
@@ -42,23 +70,41 @@ export default function NavBar() {
         <box-icon name='infinite' size='md'></box-icon>
       </span>
       {!bigScreen ? (
-        <span style={{ marginRight: '12px' }}>
+        <span style={{ marginRight: '12px', color: 'inherit ' }}>
           <box-icon name='menu' size='md' onClick={menuHandler}></box-icon>
         </span>
       ) : (
         <ul>
-          <li
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.replace('/#home-container');
-            }}>
-            Home
+          <li>
+            <Link to='home-link' spy={true} smooth={true} offset={-50}>
+              Home
+            </Link>
           </li>
-          <li>About</li>
-          <li>Ed&Ex</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li>
+            <Link to='about-link' spy={true} smooth={true} offset={-50}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to='edex-link' spy={true} smooth={true} offset={-50}>
+              Ed&Ex
+            </Link>
+          </li>
+          <li>
+            <Link to='skills-link' spy={true} smooth={true} offset={-50}>
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link to='project-link' spy={true} smooth={true} offset={-50}>
+              Project
+            </Link>
+          </li>
+          <li>
+            <Link to='contact-link' spy={true} smooth={true} offset={-50}>
+              Contact
+            </Link>
+          </li>
         </ul>
       )}
     </nav>

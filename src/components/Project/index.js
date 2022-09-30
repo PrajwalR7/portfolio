@@ -4,6 +4,7 @@ import netflix from '../../resources/netflix.jpg';
 import chat from '../../resources/chat.jpg';
 import reddit from '../../resources/reddit.jpg';
 import att from '../../resources/a-t.png';
+import { Element } from 'react-scroll';
 export default function Project() {
   const projectList = [
     {
@@ -29,17 +30,19 @@ export default function Project() {
   ];
 
   return (
-    <div id='project-container'>
-      <div id='project-header'>
-        <h2>Projects</h2>
-        <p>My recent works</p>
+    <Element id='project-link' name='project-link'>
+      <div id='project-container'>
+        <div id='project-header'>
+          <h2>Projects</h2>
+          <p>My recent works</p>
+        </div>
+        <div id='project-content'>
+          {projectList.map((ele) => {
+            return <ProjectListItem data={ele} />;
+          })}
+        </div>
       </div>
-      <div id='project-content'>
-        {projectList.map((ele) => {
-          return <ProjectListItem data={ele} />;
-        })}
-      </div>
-    </div>
+    </Element>
   );
 }
 

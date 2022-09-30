@@ -1,0 +1,111 @@
+#work {
+  width: 500px;
+  height: 400px;
+}
+
+#sky rect {
+  animation: sky 4s infinite alternate ease-in-out;
+}
+
+#little-moon {
+  fill: black;
+  stroke: black;
+  animation: rise 2s alternate infinite ease-in-out;
+}
+
+#mouse {
+  animation: move 2s alternate infinite ease-in-out;
+}
+
+#SunMoon {
+  animation: rotate 4s infinite ease-in-out,
+    onlyColor 4s infinite alternate ease-in-out;
+  transform-box: view-box;
+  transform-origin: 53% 50%;
+}
+
+#right-cloud {
+  animation: right 4s 0.5s alternate infinite ease-in-out;
+}
+
+#left-cloud {
+  animation: left 4s 0.5s alternate infinite ease-in-out;
+}
+
+@keyframes sky {
+  0% {
+    fill: rgb(69, 183, 228);
+  }
+  50% {
+    fill: rgb(245, 165, 111);
+  }
+  to {
+    fill: black;
+  }
+}
+
+@keyframes right {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+
+@keyframes left {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    fill: white;
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes onlyColor {
+  0% {
+    fill: rgb(241, 129, 87);
+  }
+  100% {
+    fill: white;
+  }
+}
+
+@keyframes move {
+  0% {
+    fill: #ccc;
+    transform: translateX(0);
+  }
+  100% {
+    fill: black;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes rise {
+  from {
+    /* fill: black; */
+    transform: translateY(-50px);
+  }
+  to {
+    /* fill: black; */
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #work {
+    height: 300px;
+    width: 500px;
+  }
+}

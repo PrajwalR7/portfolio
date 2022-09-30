@@ -108,9 +108,13 @@
   }
   #frontend,
   #backend {
+    font-size: 14px;
     width: 100%;
-    height: max-content;
     margin-top: 40px;
     margin-left: 0;
+  }
+  #frontend p,
+  #backend p {
+    font-size: 14px;
   }
 }
