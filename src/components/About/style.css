@@ -66,10 +66,10 @@
 }
 
 #about-right-content button:hover {
-  background-color: #656565;
+  color: white;
+  transform: scaleX(1.05);
   cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  color: #ccc;
+  background-color: #3b3b3b;
 }
 
 @media screen and (max-width: 1000px) {

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
-import { homeRef } from '../Home';
 import './style.css';
 import 'boxicons';
 import Scroll, { Link } from 'react-scroll';
 
-const ScrollLink = Scroll.ScrollLink;
 export default function NavBar() {
   const [menuDown, setMenuDown] = useState(false);
 
